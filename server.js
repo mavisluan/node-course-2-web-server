@@ -53,7 +53,6 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('about.hbs', {
         pageTitle: 'About Page',
-        currentYear: new Date().getFullYear()
     })
 })
 
@@ -64,6 +63,11 @@ app.get('/bad', (req, res) => {
     })
 })
 
+app.get('/project', (req, res) => {
+    res.render('project.hbs', {
+        pageTitle: 'Project'
+    })
+})
 // bind the app to a port on our machine
 app.listen(port, () => {
     console.log(`Server is up on port ${port}`)
